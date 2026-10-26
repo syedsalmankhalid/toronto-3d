@@ -16,3 +16,5 @@ Then open http://localhost:8765.
 - Drag to orbit, scroll or pinch to zoom, right-drag to pan
 - Click a landmark (CN Tower, Rogers Centre, First Canadian Place, TD Centre, Scotiabank Arena, Union Station, Fairmont Royal York, Toronto Islands, Billy Bishop Airport) for details
 - **Fly-through** runs an automatic camera tour; click anywhere or press Stop to take over
+
+Edited by Salman
