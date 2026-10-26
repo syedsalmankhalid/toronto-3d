@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Bash(rm -rf:*)"
+    ]
+  },
+  "env": {
+    "PROJECT_NAME": "toronto-3d"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"$(date +%T)  file changed\" >> .claude/hook-log.txt; echo '{\"systemMessage\":\"🪝 Hook fired: a file was just edited (logged to .claude/hook-log.txt)\"}'"
+          }
+        ]
+      }
+    ]
+  }
+}

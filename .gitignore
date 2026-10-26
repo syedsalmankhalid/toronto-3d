@@ -1,0 +1,15 @@
+# Claude Code personal/local files
+.claude/settings.local.json
+.claude/hook-log.txt
+
+# Environment and secrets
+.env
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node (in case a build step is added later)
+node_modules/
